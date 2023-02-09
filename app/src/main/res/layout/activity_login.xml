@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".controller.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/marginLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:animateLayoutChanges="true"
+            android:layout_width="wrap_content"
+            android:layout_height="650px"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/logoDescription"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputLayoutUserName"
+                android:hint="@string/hintUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:startIconDrawable="@drawable/ic_user"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/myPrimaryColor"
+                app:boxStrokeColor="@color/mySecondaryColor"
+                app:boxBackgroundColor="@color/white">
+
+                <com.myloginapplication.classes.TextInputFreeText
+                    android:id="@+id/txtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/caret_color"
+                    app:isRequired_Ext="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtInputLayoutPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtInputLayoutUserName"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:hint="@string/hintPassword"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/mySecondaryColor"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_error"
+                app:hintTextColor="@color/myPrimaryColor"
+                app:startIconDrawable="@drawable/ic_security">
+
+                <com.myloginapplication.classes.TextInputFreeText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textCursorDrawable="@drawable/caret_color"
+                    app:isRequired_Ext="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.myloginapplication.classes.BaseButton
+                android:id="@+id/btnLogin"
+                android:layout_width="240dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/txtInputLayoutPassword"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/gradient_background"
+                android:drawableEnd="@drawable/ic_white_double_arrow"
+                android:paddingStart="65dp"
+                android:paddingEnd="60dp"
+                android:text="@string/btnLogin"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/progress_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:visibility="invisible"
+                android:layout_centerInParent="true"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:background="@drawable/white_circle">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/mySecondaryColor">
+
+                </ProgressBar>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:text="@string/lblDontHaveAccount"
+                android:textColor="@color/myPrimaryColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lblSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:text="@string/lblSignUp"
+                android:textColor="@color/mySecondaryColor"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">My Login Application</string>
+
+    <string name="logoDescription">Logo</string>
+    <string name="btnBackDescription">Back button</string>
+    <string name="btnLogoutDescription">Logout button</string>
+
+    <string name="btnSignUp">Sign Up</string>
+    <string name="btnLogin">Login</string>
+    <string name="btnYes">Yes</string>
+    <string name="btnNo">No</string>
+    <string name="btnOK">OK</string>
+
+    <string name="hintUserName">User name</string>
+    <string name="hintPassword">Password</string>
+    <string name="hintFullName">Full name</string>
+
+    <string name="lblNewUserAccount">New user account</string>
+    <string name="lblHello">Hello</string>
+    <string name="lblSignUp">Sign Up</string>
+    <string name="lblCancel">Cancel</string>
+    <string name="lblDontHaveAccount">Don\'t have an account?</string>
+
+    <string name="errorDialogTitle">Error</string>
+    <string name="errorRequiredField">This is a required field.</string>
+    <string name="errorWhiteSpaces">This field must not contain white spaces.</string>
+    <string name="errorInvalidFormat">Invalid format.</string>
+    <string name="errorInvalidPassword">Invalid password.</string>
+    <string name="errorNonExistentUser">Non-existent user.</string>
+    <string name="errorExistingUsername">Existing username. Please enter a different one.</string>
+    <string name="errorSavingNewUser">Error saving a new user.</string>
+
+    <string name="logoutDialogTitle">Logout</string>
+    <string name="logoutDialogMessage">Do you really want to exit?</string>
+    <string name="autoLogoutDialogMessage">Your session has expired.</string>
+
+</resources>

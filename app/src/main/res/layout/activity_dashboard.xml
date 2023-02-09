@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".controller.DashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/marginLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <ImageView
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/btnLogoutDescription"
+            android:src="@drawable/ic_logout"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/lblHello"
+            android:textColor="@color/myPrimaryColor"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/lblUserFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="User full name"
+            android:textColor="@color/myPrimaryColor"
+            android:textSize="22sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp">
+
+            <TextView
+                android:id="@+id/yourMainPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="70dp"
+                android:fontFamily="sans-serif"
+                android:text="Your main page"
+                android:textColor="#ccc"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/sessionEnds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yourMainPage"
+                android:layout_centerHorizontal="true"
+                android:text="The user session ends in :"
+                android:textColor="#ccc"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/countDownText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sessionEnds"
+                android:layout_centerHorizontal="true"
+                android:text="10:00"
+                android:textColor="#ccc"
+                android:textSize="32sp" />
+
+            <RelativeLayout
+                android:id="@+id/progress_bar_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/white_circle"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:visibility="invisible"
+                android:padding="15dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/mySecondaryColor">
+
+                </ProgressBar>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
